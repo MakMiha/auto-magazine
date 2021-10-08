@@ -1,0 +1,20 @@
+.header {
+  border-bottom: 1px solid $secondaryColor;
+  @include flex($justify: space-between);
+  padding: 16px 50px;
+
+  &__links {
+    @include flex;
+  }
+
+  &__link {
+    @include font(12px, 16px);
+    letter-spacing: 1px;
+    margin: 0 20px 0 0;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: transform .3s ease-in-out;
+    }
+  }
+}

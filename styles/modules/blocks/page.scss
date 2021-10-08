@@ -1,0 +1,8 @@
+.page {
+  margin: auto;
+  max-width: 1440px;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  @include font(30px, 48px); 
+}
+

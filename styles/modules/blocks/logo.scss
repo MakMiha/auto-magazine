@@ -1,0 +1,14 @@
+.logo {
+  margin: 0 43.5% 0 0;
+  @include wh(184px, 38px);
+
+  @media (max-width: 640px) {
+    @include wh(100px, 20px);
+  }
+  &_footer {
+    margin: 0;
+    @media (max-width: 640px) {
+      @include wh(280px, 58px);
+    }
+  }
+}

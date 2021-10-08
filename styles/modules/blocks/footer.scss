@@ -1,0 +1,24 @@
+.footer {
+  @include flex(center, space-between);
+  flex-wrap: wrap;
+  &__subscribe {
+    margin: 50px 50px;
+    @media (max-width: 640px) {
+      margin: 20px 6.25%;
+    }
+  }
+
+  &__title {
+    @include font(46px, 46px);
+    @media (max-width: 640px) {
+      @include font(26px, 26px);
+    }
+  }
+  
+  &__subtitle {
+    @include font(19px, 26px);
+    @media (max-width: 640px) {
+      @include font(14px, 14px);
+    }
+  }
+}

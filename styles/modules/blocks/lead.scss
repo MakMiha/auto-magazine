@@ -1,0 +1,83 @@
+.lead {
+  margin: 150px 0 0;
+  position: relative;
+  @include flex(normal, normal);
+  flex-direction: column;
+  @media (max-width: 1000px) {
+    margin: 100px 0 0;
+  }
+  @media (max-width: 640px) {
+    margin: 60px 0 0;
+  }
+  &__subtitle {
+    text-align: center;
+    margin: 0 0 0 80px;
+    max-width: 540px;
+    @include font(19px, 28px, normal, 400);
+    text-transform: uppercase;
+    @media (max-width: 1170px) {
+      margin: 0 calc((100% - 540px)/2) 0;
+    }
+    @media (max-width: 640px) {
+      @include font(11px, 14px, normal, 400);
+      @include wh(280px, 150px);
+      margin: 0 calc((100% - 280px)/2) 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 30px 0 51px 80px;
+    @include wh(560px, 240px);
+    @include font(65px, 73px, normal, 400);
+    @media (max-width: 1170px) {
+      margin: 30px calc((100% - 560px)/2) 51px;
+    }
+    @media (max-width: 640px) {
+      @include font(38px, 50px, normal, 400);
+      @include wh(280px, 150px);
+      margin: 26px calc((100% - 280px)/2) 30px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    @include wh(50%, 540px);
+    @media (max-width: 1170px) {
+      position: relative;
+      @include wh(700px, 510px);
+      margin: 100px calc((100% - 700px)/2) 0;
+    }
+    @media (max-width: 800px) {
+      position: relative;
+      @include wh(700px, 510px);
+      margin: 100px 4.43% 0;
+    }
+  }
+
+  &__button {
+    margin: 60px 0 180px 180px;
+    @include wh(360px, 64px);
+    border: 1px solid $secondaryColor;
+    box-sizing: border-box;
+    background-color: transparent;
+    @include font(15px, 60px, normal, 400);
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $secondaryColor;
+    &:hover{
+      cursor: pointer;
+      background-color: $secondaryColor;
+      color: $primaryColor; 
+    }
+    @media (max-width: 1170px) {
+      margin: 100px calc((100% - 360px)/2) 100px;
+    }
+    @media (max-width: 640px) {
+      @include wh(280px, 64px);
+      margin: 60px calc((100% - 280px)/2) 60px;
+    }
+  }
+}
