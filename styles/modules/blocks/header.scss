@@ -11,6 +11,8 @@
     @include font(12px, 16px);
     letter-spacing: 1px;
     margin: 0 20px 0 0;
+    color: $secondaryColor;
+    text-decoration: none;
     &:hover {
       cursor: pointer;
       opacity: 0.6;
