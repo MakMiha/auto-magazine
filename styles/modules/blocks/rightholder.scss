@@ -1,5 +1,5 @@
 .rightholder {
-  margin: 50px 50px;
+  margin: 50px 50px 0;
   @include flex(flex-end, space-between);
   flex-direction: column;
   @media (max-width: 640px) {

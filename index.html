@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,66 +15,67 @@
         <a href="#" target="_blank" class="header__link">Галерея</a>
         <a href="#" target="_blank" class="header__link">Пресса</a>
       </nav>
-      <img src="images/logo.svg" alt="Логотип журнала" class="logo">
+      <img src="images/logo.svg" alt="Логотип журнала" class="logo logo_place_header">
+      <button type="button" class="header__button-menu"></button>
     </header>
     <main>
       <section class="lead">
-        <h2 class="lead__subtitle">volkswagen T1</h2>
+        <p class="lead__subtitle">volkswagen T1</p>
         <h1 class="lead__title ">Новая версия популярного микроавтобуса</h1>
-        <h2 class="lead__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</h2>
+        <p class="lead__subtitle">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
         <img src="images/volkswagen.png" alt="Микроавтобус Volkswagen T1" class="lead__image">
         <button type="button" class="lead__button">Подробнее</button>
       </section>
       <section class="about">
-        <div class="about__cell about__cell_description">
+        <div class="about__cell about__cell_type_description">
           <p class="about__text"><span class="about__text-weight"> VW T1 Electro: </span> Отделение Volkswagen Commercial Vehicles представило концепт e-Bulli: классический вэн T1 1966 года 
             с электрической силовой установкой. 
             По словам производителя, проект получит коммерческое продолжение, и через фирму-партнера eClassics наборы для конверсии микроавтобусов в электрокары 
             и уже готовые машины будут продавать частным клиентам.
           </p>
         </div>
-        <div class="about__cell about__cell_plus">
+        <div class="about__cell about__cell_type_plus">
           <h2 class="about__title-list">ПЛЮСЫ</h2>
           <ul class="about__list">
-            <li class="about__list-text about__list-text_plus">Экологичный</li>
-            <li class="about__list-text about__list-text_plus">Экономный</li>
-            <li class="about__list-text about__list-text_plus">Тихий</li>
+            <li class="about__list-text about__list-text_type_plus">Экологичный</li>
+            <li class="about__list-text about__list-text_type_plus">Экономный</li>
+            <li class="about__list-text about__list-text_type_plus">Тихий</li>
           </ul>
         </div>
-        <div class="about__cell about__cell_minus">
+        <div class="about__cell about__cell_type_minus">
           <h2 class="about__title-list">МИНУСЫ</h2>
           <ul class="about__list">
-            <li class="about__list-text about__list-text_minus">Дорогой</li>
-            <li class="about__list-text about__list-text_minus">Подзарядка</li>
+            <li class="about__list-text about__list-text_type_minus">Дорогой</li>
+            <li class="about__list-text about__list-text_type_minus">Подзарядка</li>
           </ul>
         </div>
-        <div class="about__cell about__cell_gallery">
+        <div class="about__cell about__cell_type_gallery">
           <div class="gallery">
             <img src="images/volkswagen-1.png" alt="Общий вид микроавтобуса" class="gallery__image">
             <img src="images/volkswagen-2.png" alt="Салон сзади" class="gallery__image">
             <img src="images/volkswagen-3.png" alt="Салон спереди" class="gallery__image">
             <h2 class="about__title-cell">Галерея</h2>
             <div>
-              <button class="gallery__slider-prev"></button>
-              <button class="gallery__slider-next"></button>
+              <button type="button" class="gallery__slider-prev"></button>
+              <button type="button" class="gallery__slider-next"></button>
             </div>
           </div>
         </div>
-        <div class="about__cell about__cell_empty"></div>
-        <div class="about__cell about__cell_press-title ">
+        <div class="about__cell about__cell_type_empty"></div>
+        <div class="about__cell about__cell_type_press-title ">
           <h2 class="about__title-cell">Пресса</h2>
         </div>
-        <div class="about__cell about__cell_press">
+        <div class="about__cell about__cell_type_press">
           <div class="review">
-            <p class="about__text review__text">
-              <span class="about__text-weight">Engadget: </span>
+            <p class="review__text">
+              <span class="review__text-weight">Engadget: </span>
               VW’s e-BULLI concept shows how your classic van can become an EV.</p>
-            <p class="about__text review__text">
-              <span class="about__text-weight">Drive.ru: </span>
+            <p class="review__text">
+              <span class="review__text-weight">Drive.ru: </span>
               Вэн Volkswagen e-Bulli скрестил классику с современной техникой.</p>
             <div class="review__slider">
-              <button class="review__dot review__dot_active"></button>
-              <button class="review__dot"></button>
+              <button type="button" class="review__dot review__dot_display_active"></button>
+              <button type="button" class="review__dot"></button>
             </div>
             <a
             href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html"
@@ -94,15 +95,15 @@
       <div class="footer__subscribe">
         <h2 class="footer__title"> Подписка</h2>
         <p class="footer__subtitle">На новые спецвыпуски машин</p>
-        <div class="form-container">
-          <input type="text" class="form-container__name"> 
-          <input type="text" class="form-container__family"> 
-          <input type="email" class="form-container__email"> 
+        <form name="form-subscribe" class="form-container">
+          <input type="text" placeholder="имя" class="form-container__text form-container__text_type_name"> 
+          <input type="text" placeholder="фамилия" class="form-container__text form-container__text_type_family"> 
+          <input type="email" placeholder="почта" class="form-container__text form-container__text_type_email"> 
           <button type="submit" class="form-container__button">Подписка</button>
-        </div>
+        </form>
       </div>
       <div class="rightholder">
-        <img src="images/logo.svg" alt="Логотип журнала" class="logo logo_footer">
+        <img src="images/logo.svg" alt="Логотип журнала" class="logo logo_place_footer">
         <p class="rightholder__copyright">© Auto-Magazine 2021</p>
       </div>
     </footer>

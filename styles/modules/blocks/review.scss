@@ -17,9 +17,10 @@
     background-color: transparent;
     border: 1px solid $secondaryColor;
     border-radius: 50%;
-
-    &_active, &:hover{
-      background-color: $secondaryColor; 
+    &_display {
+      &_active, &:hover{
+        background-color: $secondaryColor; 
+      }
     }
   }
 
@@ -40,5 +41,20 @@
     @media (max-width: 640px) {
       margin: 180px 20px 20px;
     }
+  }
+
+  &__text {
+    @include wh(1100px, 420px );
+    @include font(30px, 42px, normal, 300);
+    margin: 40px 50px;
+    justify-items: center;
+    align-items: center;
+    @media (max-width: 640px) {
+      @include font(16px, 27px, normal, 300);
+      margin: 20px 20px;
+    }
+  }
+  &__text-weight {
+    font-weight: 400;
   }
 }

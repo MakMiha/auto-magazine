@@ -11,10 +11,10 @@
 
   &__slider-next {
     margin: 56px 50px 56px 30px;
-    @include slider(url("/images/next.svg"));   
+    @include slider(url("../images/next.svg"));   
   }
 
   &__slider-prev {
-    @include slider(url("/images/prev.svg"));   
+    @include slider(url("../images/prev.svg"));   
   }
 }
