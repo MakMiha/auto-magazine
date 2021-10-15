@@ -1,0 +1,13 @@
+.page {
+  margin: auto;
+  max-width: 1440px;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  @include font(30px, 48px); 
+}
+
+@media (min-width:1440px) {
+  .page {
+    padding: 0 calc((100% - 1440px)/2);
+  }
+}

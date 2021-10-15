@@ -1,0 +1,64 @@
+.header {
+  border-bottom: 1px solid $secondaryColor;
+  @include flex($justify: space-between);
+  padding: 16px 50px;
+
+  @media (max-width: 1000px) {
+    padding: 16px 34px;
+  }
+  @media (max-width: 640px) {
+    padding: 16px 20px;
+  }
+
+  &__links {
+    @include flex;
+    @media (max-width: 1000px) {
+      display: none;
+      &_display {
+        &_active {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include font(12px, 16px);
+    letter-spacing: 1px;
+    margin: 11px 20px 11px 0;
+    color: $secondaryColor;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__button-menu {
+    display: none;
+    width: 26px;
+    height: 26px;
+    border: none;
+    cursor: pointer;
+    background: {
+      image: url("../images/menu.svg");
+      repeat: no-repeat;
+      position: center;
+      color: transparent;
+    }
+    @media (max-width: 1000px) {
+      display: block;
+      &_view {
+        &_close {
+          background-image: url("../images/close.svg");
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: transform .3s ease-in-out;
+    }
+  }
+}

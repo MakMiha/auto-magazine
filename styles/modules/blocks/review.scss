@@ -1,0 +1,60 @@
+.review {
+  @include flex(center, space-between);
+  flex-wrap: wrap;
+  
+  &__slider {
+    margin: 260px 0 50px 50px;
+    @media (max-width: 620px) {
+      margin: 180px 0 20px 20px;
+    }
+  }
+
+  &__dot {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    margin: 0 0 0 14px;
+    background-color: transparent;
+    border: 1px solid $secondaryColor;
+    border-radius: 50%;
+    &_display {
+      &_active, &:hover{
+        background-color: $secondaryColor; 
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    margin: 260px 50px 50px 0;
+    background-color: transparent;
+    border: 1px solid $secondaryColor;
+    padding: 12px 26px;
+    @include font(19px, 28px);
+    color: $secondaryColor;
+    border-radius: 50%;
+    text-decoration: none;
+    &:hover{
+      background-color: $secondaryColor;
+      color: $primaryColor; 
+    }
+    @media (max-width: 640px) {
+      margin: 180px 20px 20px;
+    }
+  }
+
+  &__text {
+    @include wh(1100px, 420px );
+    @include font(30px, 42px, normal, 300);
+    margin: 40px 50px;
+    justify-items: center;
+    align-items: center;
+    @media (max-width: 640px) {
+      @include font(16px, 27px, normal, 300);
+      margin: 20px 20px;
+    }
+  }
+  &__text-weight {
+    font-weight: 400;
+  }
+}

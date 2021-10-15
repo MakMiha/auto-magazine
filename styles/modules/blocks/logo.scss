@@ -1,0 +1,25 @@
+.logo {
+  margin: 0 43.5% 0 0;
+  @include wh(184px, 38px);
+
+  @media (max-width: 1000px) {
+    margin: 0 0 0 38%;
+    &_display {
+      &_active {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    @include wh(100px, 20px);
+    margin: 0 0 0 32%;
+  }
+  &_place {
+    &_footer {
+      margin: 0;
+      @media (max-width: 640px) {
+        @include wh(280px, 58px);
+      }
+    }
+  }
+}

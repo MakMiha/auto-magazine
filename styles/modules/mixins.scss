@@ -1,0 +1,40 @@
+@mixin font($size, $height, $style: normal, $weight: 400) {
+  font-family: 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin flex($align: center, $justify: flex-start) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin wh($width, $height) {
+  max-width: $width;
+  max-height: $height;
+}
+
+@mixin reset-list {
+  padding: 0;
+  list-style: none;
+}
+
+@mixin slider($image) {
+  width: 42px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: center;
+    color: transparent;
+  }
+  &:hover {
+    opacity: 0.6;
+    transition: transform .3s ease-in-out;
+  }
+}

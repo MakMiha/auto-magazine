@@ -1,0 +1,59 @@
+.form-container {
+  @include flex;
+  flex-wrap: wrap;
+  width: 340px;
+  margin-top: 64px;
+  @media (max-width: 640px) {
+    margin-top: 60px;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0 0 0 10px;
+    border: 1px solid $secondaryColor;
+    background-color: transparent;
+    cursor: pointer;
+    @include font(9px, 18px);
+    color: $secondaryColor;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    &:active, &:focus {
+      outline: none;
+    }
+    &_type {
+      &_name {
+        width: 170px;
+        height: 32px;
+        @media (max-width: 640px) {
+          width: 140px;
+        }
+      }
+
+      &_family {
+        width: 170px;
+        height: 32px;
+        @media (max-width: 640px) {
+          width: 140px;
+        }
+      }
+
+      &_email {
+        width: 260px;
+        height: 32px;
+        @media (max-width: 640px) {
+          width: 200px;
+        }
+      }
+    }
+  }
+  &__button {
+    width: 80px;
+    height: 32px;
+    border: 1px solid $secondaryColor;
+    @include font(10px, 13px);
+    background-color: $secondaryColor; 
+    color: $primaryColor;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}
